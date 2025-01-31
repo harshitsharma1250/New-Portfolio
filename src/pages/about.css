@@ -1,0 +1,77 @@
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50px * 16 - 20px * 16));
+  }
+}
+
+.slider .slide-track {
+  display: flex;
+  width: calc((50px + 20px) * 32); /* 16 icons twice for seamless loop */
+  animation: scroll 40s linear infinite;
+}
+
+.slider .slide {
+  width: 50px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px; /* Adjust the gap between icons */
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.fast-slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes fast-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50px * 16 - 20px * 16));
+  }
+}
+
+.fast-slider .fast-slide-track {
+  display: flex;
+  width: calc((50px + 20px) * 32); /* 16 icons twice for seamless loop */
+  animation: fast-scroll 20s linear infinite; /* Adjusted speed */
+}
+
+.fast-slider .fast-slide {
+  width: 50px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px; /* Adjust the gap between icons */
+}
+
+.fast-icon {
+  width: 40px;
+  height: 40px;
+}

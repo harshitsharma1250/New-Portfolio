@@ -1,0 +1,97 @@
+/* Add perspective to the flip container */
+.flip-container {
+  perspective: 1000px;
+}
+
+.cube-animation {
+  position: relative;
+  width: 200px; /* Adjust width as needed */
+  height: 60px; /* Adjust height as needed */
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform-origin: center;
+}
+
+.flip-container:hover .cube-animation {
+  transform: rotateX(180deg); /* Flip effect on hover around the X-axis */
+}
+
+.cube-animation span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: 600; /* Adjust font weight as needed */
+}
+
+.cube-animation .front {
+  transform: rotateX(0deg);
+  background-color: transparent;
+  color: #00e6cf;
+}
+
+.cube-animation .back {
+  transform: rotateX(180deg);
+  background-color: #232c79; /* Match the background of the sidebar */
+  color: #00e6cf;
+}
+
+.active {
+  background-color: #0c1137;
+  border-right: none;
+  border-left: 12px solid #00e6cf;
+  margin-left: -10px;
+  width: 150%;
+}
+
+.active h1 {
+  color: #00e6cf;
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.75);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.modal-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.75);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.downicon {
+  transition: transform 300ms ease-in-out;
+}
+
+.custom-scroll {
+  overflow: auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.custom-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.custom-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
