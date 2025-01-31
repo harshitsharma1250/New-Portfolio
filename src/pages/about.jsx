@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GoNorthStar } from "react-icons/go";
 import { FaGit, FaLinkedinIn } from "react-icons/fa";
 import {
@@ -24,7 +24,7 @@ import classNames from "classnames";
 import ME from "../assets/Me.png";
 import College from "../assets/iiitkota.png";
 import School from "../assets/school.png";
-import Signature from "../assets/signature.png";
+import Signature from "../assets/sign.png";
 import "./about.css";
 
 const About = ({ id }) => {
@@ -337,30 +337,33 @@ const About = ({ id }) => {
 							</div>
 						</div>
 					</div>
-					<div className="w-1/4 max-sm:w-1/2 max-lg:w-1/3 p-4 max-sm:p-2 h-full">
-				<div
-					className={classNames(
-						"w-full h-full rounded-xl shadow-xl bg-blue-900 p-2 transition-opacity duration-1000 flex flex-col",
-						{
-							"opacity-0": !visibleDivs.includes("6"),
-							"opacity-100": visibleDivs.includes("6"),
-						}
-					)}
-					data-index="6"
-					ref={(el) => (divRefs.current[6] = el)}
-				>
-					<div className="w-full h-[70%] flex justify-center items-center">
-						<img src={Signature} alt="" />
-					</div>
-					<div className="w-full h-[30%] text-gray-200 flex flex-col p-2">
-						<p className="text-[12px] max-tnd:text-[11px] text-gray-300">
-							More about me
-						</p>
-						<h1 className="text-gray-300 text-md">My credentials</h1>
-					</div>
-				</div>
-				</div>
-
+				<div className="w-1/4 max-sm:w-1/2 max-lg:w-1/3 p-4 max-sm:p-2 h-full">
+                    <div
+                      className={classNames(
+                        "w-full h-full rounded-xl shadow-xl bg-blue-900 p-2 transition-opacity duration-1000 flex flex-col",
+                        {
+                          "opacity-0": !visibleDivs.includes("6"),
+                          "opacity-100": visibleDivs.includes("6"),
+                        }
+                      )}
+                      data-index="6"
+                      ref={(el) => (divRefs.current[6] = el)}
+                    >
+                    <div className="w-full h-[70%] flex justify-center items-center">
+                      <img
+                        src={Signature}
+                        alt=""
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="w-full h-[30%] text-gray-200 flex flex-col p-2">
+                      <p className="text-[12px] max-tnd:text-[11px] text-gray-300">
+                        More about me
+                      </p>
+                      <h1 className="text-gray-300 text-md">My credentials</h1>
+                    </div>
+                </div>
+               </div>
 				</div>
 			</div>
 		</div>
